@@ -1,0 +1,96 @@
+.backgroundContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: -webkit-fill-available;
+  height: -moz-available;
+}
+
+.addButton,
+.changeMonthButton {
+  border: none;
+  outline: none;
+  background-color: #ffffffce;
+  font-size: 28px;
+  color: #666666;
+  border-radius: 10px;
+  padding: 2px 8px;
+  width: fit-content;
+}
+
+.logoutButton {
+  border: none;
+  outline: none;
+  background-color: #ffffffce;
+  border-radius: 10px;
+  padding: 7px 8px;
+  width: fit-content;
+  float: inline-end;
+}
+
+.yearTitle,
+.monthTitle {
+  align-self: center;
+  color: var(--dark-blue-base-color);
+}
+
+.yearTitle {
+  margin: 0px;
+}
+
+.monthTitle {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 26px;
+}
+
+.changeMonthButton {
+  height: fit-content;
+}
+
+.monthTitle h1 {
+  margin: 25px 0px;
+}
+
+.calendarContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  overflow: hidden;
+}
+
+.weekdayTitle {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .monthTitle h1 {
+    margin: 10px;
+    font-size: 30px;
+  }
+
+  .addButton {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  .logoutButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .addButton,
+  .changeMonthButton {
+    padding: 1px 7px;
+    font-size: 24px;
+  }
+
+  .backgroundContainer {
+    padding: 14px 0px 0px 0px;
+  }
+}

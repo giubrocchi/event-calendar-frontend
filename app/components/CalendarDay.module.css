@@ -1,0 +1,57 @@
+.dayContainer {
+  background-color: #ffffffb9;
+  border: 1px #cfcfcf solid;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.topDate {
+  text-align: end;
+}
+
+.clearDate {
+  color: #969696;
+}
+
+.eventsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.eventsBox::-webkit-scrollbar,
+.eventContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.eventContainer {
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px 5px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  min-height: 14px;
+}
+
+.eventContainer span {
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .dayContainer,
+  .eventContainer {
+    padding: 1px;
+  }
+
+  .eventContainer {
+    font-size: 10px;
+  }
+
+  .eventContainer span {
+    display: none;
+  }
+}
