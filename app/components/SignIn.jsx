@@ -46,7 +46,9 @@ export default function SignIn() {
     });
 
     if (response.status !== 200) {
-      toast.error(response.text());
+      const jsonResponse = await response.json();
+
+      toast.error(jsonResponse.message);
 
       return;
     }
